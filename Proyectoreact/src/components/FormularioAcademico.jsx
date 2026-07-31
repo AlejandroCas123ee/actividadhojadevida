@@ -1,81 +1,78 @@
-function Formulario() {
+import { useState } from "react";
 
-    return (
+function FormularioAcademico({ siguiente, anterior }) {
 
-        <div className="formulario">
+  const continuar = (e) => {
+    e.preventDefault();
 
-            <h2>Registro de Aprendices</h2>
+    alert("Información académica guardada");
 
-            <form>
-                <div className="grupo">
-                    <label>Fotografía</label>
-                    <input type="file" accept="image/*" />
-                </div>
+    if (siguiente) {
+      siguiente();
+    }
+  };
 
-                <div className="grupo">
-                    <label>Nombre Completo</label>
-                    <input
-                        type="text"
-                        placeholder="Ingrese su nombre"
-                    />
-                </div>
+  return (
+    <div className="formulario">
+      <h2>Información Académica</h2>
 
-                <div className="grupo">
-                    <label>Edad</label>
-                    <input
-                        type="number"
-                        placeholder="Ingrese su edad"
-                    />
-                </div>
+      <form onSubmit={continuar}>
 
-                <div className="grupo">
-                    <label>Ciudad</label>
-                    <input
-                        type="text"
-                        placeholder="Ingrese su ciudad"
-                    />
-                </div>
-
-                <div className="grupo">
-                    <label>Programa de formación</label>
-                    <input
-                        type="text"
-                        placeholder="Ejemplo:ADSO"
-                    />
-                </div>
-
-                <div className="grupo">
-                    <label>Correo Electronico</label>
-                    <input
-                        type="mail"
-                        placeholder="correo@sena.edu.co"
-                    />
-                </div>
-
-                <div className="grupo">
-                    <label>Numero de Ficha</label>
-                    <input
-                        type="number"
-                        placeholder="Ingrese la ficha"
-                    />
-                </div>
-
-                <div className="grupo">
-                    <label>Jornada</label>
-                    <select>
-                        <option>Mañana</option>
-                        <option>Tarde</option>
-                        <option>Noche</option>
-                        <option>Mixta</option>
-                    </select>
-                </div>
-
-                <button type="submit">
-                    Continuar Registro
-                </button>
-            </form>
+        <div className="grupo">
+          <label>Nivel de Formación</label>
+          <select>
+            <option>Técnico</option>
+            <option>Tecnólogo</option>
+            <option>Profesional</option>
+          </select>
         </div>
-    );
+
+        <div className="grupo">
+          <label>Título Obtenido</label>
+          <input
+            type="text"
+            placeholder="Ingrese el título"
+          />
+        </div>
+
+        <div className="grupo">
+          <label>Cursos Realizados</label>
+          <input
+            type="text"
+            placeholder="Ingrese los cursos"
+          />
+        </div>
+
+        <div className="grupo">
+          <label>Institución Educativa</label>
+          <input
+            type="text"
+            placeholder="Ingrese la institución"
+          />
+        </div>
+
+        <div className="grupo">
+          <label>Año de Graduación</label>
+          <input
+            type="number"
+            placeholder="Ejemplo: 2026"
+          />
+        </div>
+
+        <button 
+          type="button"
+          onClick={anterior}
+        >
+          Anterior
+        </button>
+
+        <button type="submit">
+          Siguiente
+        </button>
+
+      </form>
+    </div>
+  );
 }
 
-export default Formulario;
+export default FormularioAcademico;
