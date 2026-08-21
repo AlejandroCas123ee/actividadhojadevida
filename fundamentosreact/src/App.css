@@ -1,0 +1,322 @@
+/* ==============================
+   App.css
+   ============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+}
+
+/* ==============================
+   CONTENEDOR PRINCIPAL
+   ============================== */
+
+.contenedor {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+/* ==============================
+   CONTENIDO
+   ============================== */
+
+.contenido {
+  width: 100%;
+  max-width: 850px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 35px;
+  margin: 20px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+/* ==============================
+   HEADER
+   ============================== */
+
+header {
+  width: 100%;
+  max-width: 850px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin-bottom: 8px;
+  color: #1e3a8a;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+header p {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* ==============================
+   TÍTULOS
+   ============================== */
+
+h1,
+h2 {
+  text-align: center;
+  color: #1e3a8a;
+}
+
+h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+/* ==============================
+   FORMULARIOS
+   ============================== */
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #374151;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #1f2937;
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.25s ease;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: #9ca3af;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* ==============================
+   BOTONES
+   ============================== */
+
+.botones {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ==============================
+   BOTÓN ANTERIOR
+   ============================== */
+
+.botones button:first-child {
+  background: #6b7280;
+}
+
+.botones button:first-child:hover {
+  background: #4b5563;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+  width: 100%;
+  max-width: 850px;
+  margin-top: auto;
+  padding-top: 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ==============================
+   CAMPOS / GRUPOS
+   ============================== */
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.fila {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* ==============================
+   VISTA PREVIA
+   ============================== */
+
+.vista-previa {
+  width: 100%;
+}
+
+.vista-previa h2 {
+  margin-bottom: 20px;
+}
+
+.vista-previa section {
+  margin-bottom: 25px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border-left: 4px solid #2563eb;
+}
+
+.vista-previa section h3 {
+  margin-bottom: 12px;
+  color: #1e3a8a;
+}
+
+.vista-previa p {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* ==============================
+   RESPONSIVE - TABLETS
+   ============================== */
+
+@media (max-width: 768px) {
+  .contenedor {
+    padding: 20px 15px;
+  }
+
+  .contenido {
+    padding: 25px 20px;
+    margin: 15px auto;
+  }
+
+  header h1 {
+    font-size: 27px;
+  }
+
+  .fila {
+    grid-template-columns: 1fr;
+  }
+
+  .botones {
+    flex-direction: column-reverse;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* ==============================
+   RESPONSIVE - CELULARES
+   ============================== */
+
+@media (max-width: 480px) {
+  .contenedor {
+    padding: 15px 10px;
+  }
+
+  .contenido {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 15px;
+    padding: 11px 12px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 11px 20px;
+  }
+}
