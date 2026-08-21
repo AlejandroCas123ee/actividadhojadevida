@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function FormularioDatos({ datos, setDatos, siguiente }) {
 
   const actualizar = (campo, valor) => {
@@ -72,6 +73,32 @@ function FormularioDatos({ datos, setDatos, siguiente }) {
 
     // Si todo está correcto
     siguiente();
+=======
+import { useState } from "react";
+
+function FormularioDatos({ siguiente }) {
+
+  // Estados del formulario
+  const [foto, setFoto] = useState(null);
+  const [nombre, setNombre] = useState("");
+  const [edad, setEdad] = useState("");
+  const [ciudad, setCiudad] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [programa, setPrograma] = useState("");
+  const [ficha, setFicha] = useState("");
+  const [jornada, setJornada] = useState("Mañana");
+
+  // Función del botón Continuar
+  const continuar = (e) => {
+
+    e.preventDefault();
+
+    alert("Los datos fueron capturados correctamente.");
+
+    if (siguiente) {
+      siguiente();
+    }
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
   };
 
   return (
@@ -83,6 +110,7 @@ function FormularioDatos({ datos, setDatos, siguiente }) {
 
         <div className="grupo">
           <label>Fotografía</label>
+<<<<<<< HEAD
 
           <input
             type="file"
@@ -97,11 +125,18 @@ function FormularioDatos({ datos, setDatos, siguiente }) {
                 actualizar("foto", imagenURL);
               }
             }}
+=======
+          <input
+            type="file"
+            accept="image/*"
+            onChange={(e) => setFoto(e.target.files[0])}
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
           />
         </div>
 
         <div className="grupo">
           <label>Nombre Completo</label>
+<<<<<<< HEAD
 
           <input
             type="text"
@@ -110,11 +145,19 @@ function FormularioDatos({ datos, setDatos, siguiente }) {
             onChange={(e) =>
               actualizar("nombre", e.target.value)
             }
+=======
+          <input
+            type="text"
+            placeholder="Ingrese su nombre"
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
           />
         </div>
 
         <div className="grupo">
           <label>Edad</label>
+<<<<<<< HEAD
 
           <input
             type="number"
@@ -125,11 +168,19 @@ function FormularioDatos({ datos, setDatos, siguiente }) {
             onChange={(e) =>
               actualizar("edad", e.target.value)
             }
+=======
+          <input
+            type="number"
+            placeholder="Ingrese su edad"
+            value={edad}
+            onChange={(e) => setEdad(e.target.value)}
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
           />
         </div>
 
         <div className="grupo">
           <label>Ciudad</label>
+<<<<<<< HEAD
 
           <input
             type="text"
@@ -138,10 +189,18 @@ function FormularioDatos({ datos, setDatos, siguiente }) {
             onChange={(e) =>
               actualizar("ciudad", e.target.value)
             }
+=======
+          <input
+            type="text"
+            placeholder="Ingrese su ciudad"
+            value={ciudad}
+            onChange={(e) => setCiudad(e.target.value)}
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
           />
         </div>
 
         <div className="grupo">
+<<<<<<< HEAD
           <label>Programa de formación</label>
 
           <input
@@ -151,11 +210,20 @@ function FormularioDatos({ datos, setDatos, siguiente }) {
             onChange={(e) =>
               actualizar("programa", e.target.value)
             }
+=======
+          <label>Programa de Formación</label>
+          <input
+            type="text"
+            placeholder="Ejemplo: ADSO"
+            value={programa}
+            onChange={(e) => setPrograma(e.target.value)}
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
           />
         </div>
 
         <div className="grupo">
           <label>Correo Electrónico</label>
+<<<<<<< HEAD
 
           <input
             type="email"
@@ -165,11 +233,19 @@ function FormularioDatos({ datos, setDatos, siguiente }) {
             onChange={(e) =>
               actualizar("correo", e.target.value)
             }
+=======
+          <input
+            type="email"
+            placeholder="correo@misena.edu.co"
+            value={correo}
+            onChange={(e) => setCorreo(e.target.value)}
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
           />
         </div>
 
         <div className="grupo">
           <label>Número de Ficha</label>
+<<<<<<< HEAD
 
           <input
             type="number"
@@ -179,6 +255,13 @@ function FormularioDatos({ datos, setDatos, siguiente }) {
             onChange={(e) =>
               actualizar("ficha", e.target.value)
             }
+=======
+          <input
+            type="number"
+            placeholder="Ingrese la ficha"
+            value={ficha}
+            onChange={(e) => setFicha(e.target.value)}
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
           />
         </div>
 
@@ -186,6 +269,7 @@ function FormularioDatos({ datos, setDatos, siguiente }) {
           <label>Jornada</label>
 
           <select
+<<<<<<< HEAD
             value={datos.jornada || ""}
             onChange={(e) =>
               actualizar("jornada", e.target.value)
@@ -195,6 +279,11 @@ function FormularioDatos({ datos, setDatos, siguiente }) {
               Seleccione una jornada
             </option>
 
+=======
+            value={jornada}
+            onChange={(e) => setJornada(e.target.value)}
+          >
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
             <option>Mañana</option>
             <option>Tarde</option>
             <option>Noche</option>
@@ -203,7 +292,11 @@ function FormularioDatos({ datos, setDatos, siguiente }) {
         </div>
 
         <button type="submit">
+<<<<<<< HEAD
           Continuar Registro
+=======
+          Continuar registro
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
         </button>
 
       </form>

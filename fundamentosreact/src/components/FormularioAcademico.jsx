@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+<<<<<<< HEAD
 function FormularioAcademico({
   datos,
   setDatos,
@@ -98,10 +99,23 @@ function FormularioAcademico({
     alert("Información académica guardada correctamente.");
 
     siguiente();
+=======
+function FormularioAcademico({ siguiente, anterior }) {
+
+  const continuar = (e) => {
+    e.preventDefault();
+
+    alert("Información académica guardada");
+
+    if (siguiente) {
+      siguiente();
+    }
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
   };
 
   return (
     <div className="formulario">
+<<<<<<< HEAD
 
       <h2>Información Académica</h2>
 
@@ -132,11 +146,24 @@ function FormularioAcademico({
               Profesional
             </option>
 
+=======
+      <h2>Información Académica</h2>
+
+      <form onSubmit={continuar}>
+
+        <div className="grupo">
+          <label>Nivel de Formación</label>
+          <select>
+            <option>Técnico</option>
+            <option>Tecnólogo</option>
+            <option>Profesional</option>
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
           </select>
         </div>
 
         <div className="grupo">
           <label>Título Obtenido</label>
+<<<<<<< HEAD
 
           <input
             type="text"
@@ -206,10 +233,25 @@ function FormularioAcademico({
 
           </div>
 
+=======
+          <input
+            type="text"
+            placeholder="Ingrese el título"
+          />
+        </div>
+
+        <div className="grupo">
+          <label>Cursos Realizados</label>
+          <input
+            type="text"
+            placeholder="Ingrese los cursos"
+          />
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
         </div>
 
         <div className="grupo">
           <label>Institución Educativa</label>
+<<<<<<< HEAD
 
           <input
             type="text"
@@ -223,10 +265,17 @@ function FormularioAcademico({
             }
           />
 
+=======
+          <input
+            type="text"
+            placeholder="Ingrese la institución"
+          />
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
         </div>
 
         <div className="grupo">
           <label>Año de Graduación</label>
+<<<<<<< HEAD
 
           <input
             type="number"
@@ -245,6 +294,15 @@ function FormularioAcademico({
         </div>
 
         <button
+=======
+          <input
+            type="number"
+            placeholder="Ejemplo: 2026"
+          />
+        </div>
+
+        <button 
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
           type="button"
           onClick={anterior}
         >
@@ -256,7 +314,10 @@ function FormularioAcademico({
         </button>
 
       </form>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
     </div>
   );
 }

@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 /* ==============================
    App.css
    ============================== */
+=======
+/* App.css */
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
 
 * {
   margin: 0;
@@ -9,6 +13,7 @@
 }
 
 body {
+<<<<<<< HEAD
   min-height: 100vh;
   background: linear-gradient(135deg, #eef2ff, #f8fafc);
   font-family: Arial, Helvetica, sans-serif;
@@ -69,10 +74,36 @@ header p {
 /* ==============================
    TÍTULOS
    ============================== */
+=======
+  background: #f4f6f9;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.contenedor {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.contenido {
+  width: 100%;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 35px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
 
 h1,
 h2 {
   text-align: center;
+<<<<<<< HEAD
   color: #1e3a8a;
 }
 
@@ -87,22 +118,36 @@ h2 {
 
 form {
   width: 100%;
+=======
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+/* Formularios */
+
+form {
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
 label {
+<<<<<<< HEAD
   display: block;
   margin-bottom: 7px;
   font-weight: 600;
   color: #374151;
+=======
+  font-weight: bold;
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
 }
 
 input,
 select,
 textarea {
   width: 100%;
+<<<<<<< HEAD
   padding: 13px 14px;
   border: 1px solid #d1d5db;
   border-radius: 9px;
@@ -127,6 +172,13 @@ input:hover,
 select:hover,
 textarea:hover {
   border-color: #9ca3af;
+=======
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: .3s;
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
 }
 
 input:focus,
@@ -134,6 +186,7 @@ select:focus,
 textarea:focus {
   outline: none;
   border-color: #2563eb;
+<<<<<<< HEAD
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
@@ -148,11 +201,23 @@ textarea:focus {
   align-items: center;
   gap: 15px;
   margin-top: 15px;
+=======
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+/* Botones */
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
 }
 
 button {
   padding: 12px 25px;
   border: none;
+<<<<<<< HEAD
   border-radius: 9px;
   background: #2563eb;
   color: #ffffff;
@@ -160,21 +225,33 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
+=======
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .3s;
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
 }
 
 button:hover {
   background: #1d4ed8;
+<<<<<<< HEAD
   transform: translateY(-1px);
   box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
 }
 
 button:active {
   transform: translateY(0);
+=======
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
 }
 
 button:disabled {
   background: #9ca3af;
   cursor: not-allowed;
+<<<<<<< HEAD
   transform: none;
   box-shadow: none;
 }
@@ -275,12 +352,49 @@ footer {
 
   .botones {
     flex-direction: column-reverse;
+=======
+}
+
+/* Header */
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .contenido {
+    padding: 20px;
+  }
+
+  .botones {
+    flex-direction: column;
+    gap: 10px;
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
   }
 
   button {
     width: 100%;
   }
 }
+<<<<<<< HEAD
 
 /* ==============================
    RESPONSIVE - CELULARES
@@ -320,3 +434,5 @@ footer {
     padding: 11px 20px;
   }
 }
+=======
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e

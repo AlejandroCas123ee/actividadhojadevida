@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+function Header()
+{
+    return(
+    <header>
+        <h1>Sistema de Registro Hojas de vida</h1>
+    </header>
+
+)
+}   
+
+export default Header
+
+
+
+>>>>>>> 447dc40440150e96250fdfa10eed13f830dacb2e
 function VistaPrevia({
   datos = {},
   academico = {},
